@@ -1,6 +1,6 @@
 {
   "name": "@sugiyamaryota/vite-ui-library",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "sugiyama ryota <guqeeky6va8@gmail.com>",
   "license": "MIT",
   "main": "dist/index.cjs.js",
