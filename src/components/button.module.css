@@ -1,0 +1,3 @@
+.btn{
+    @apply mylib-bg-green-400 mylib-text-white;
+}
