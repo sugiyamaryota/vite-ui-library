@@ -2,7 +2,6 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import 'tailwindcss/tailwind.css'
-import Btn from '@/components/btn'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +10,6 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
-        {Btn()}
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}

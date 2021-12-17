@@ -7,12 +7,12 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "repository": {
-		"type": "git",
-		"url": "git://github.com/sugiyamaryota/vite-ui-library.git"
-	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/sugiyamaryota"
-	},
+    "type": "git",
+    "url": "git://github.com/sugiyamaryota/vite-ui-library.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/sugiyamaryota"
+  },
   "exports": {
     ".": {
       "require": "./dist/index.cjs.js",
@@ -29,19 +29,28 @@
     "build": "run-p build:*",
     "build:scripts": "vite build",
     "build:types": "tsc --emitDeclarationOnly && tsc-alias",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",
     "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "storybook-builder-vite": "^0.1.11",
     "tailwindcss": "^3.0.0-alpha.2",
     "tsc-alias": "^1.4.1",
     "typed-css-modules": "^0.7.0",
