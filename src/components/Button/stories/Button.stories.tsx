@@ -11,4 +11,4 @@ export default {
     ],
 } as Meta
 
-export const Primary = () => <Button />
+export const Primary = () => <Button>button</Button>
