@@ -1,4 +1,11 @@
-import React from "react";
+import React, {forwardRef, ReactNode} from "react";
 import {btn} from '@/components/Button/button.module.css'
-const Button = (): JSX.Element => <div className={btn} >button</div>
+
+interface Props {
+    children: ReactNode;
+}
+
+const Button = forwardRef<HTMLDivElement, Props>(({children}, ref):JSX.Element => {
+ return <div className={`${btn}`} >{children}</div>
+})
 export default Button
