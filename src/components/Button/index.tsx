@@ -6,6 +6,6 @@ interface Props {
 }
 
 const Button = forwardRef<HTMLDivElement, Props>(({children}, ref):JSX.Element => {
- return <div className={`${btn}`} >{children}</div>
+ return <div className={`${btn}`} ref={ref}>{children}</div>
 })
 export default Button
