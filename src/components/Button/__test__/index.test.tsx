@@ -6,7 +6,7 @@
  import * as stories from '../stories/Button.stories' // import all stories from the stories file
  const {Primary} = composeStories(stories)
 
- test('renders primary button with default args', () => {
+ test('renders primary button', () => {
     // Arrange
     render(<Primary />)
     // Act

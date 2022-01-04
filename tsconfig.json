@@ -18,11 +18,12 @@
     "declaration": true,
     "declarationMap": true,
     "baseUrl": ".",
-    "types": ["jest", "node"],
+    "types": ["jest", "node", "@testing-library/jest-dom"],
     "typeRoots": ["types", "node_modules/@types"],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["./src", "./jest.config.js"]
+  "include": ["./src", "./jest.config.js", "jest.setup.ts"],
+  "exclude": ["**/*.spec.ts","node_modules"]
 }
