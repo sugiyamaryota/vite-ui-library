@@ -34,7 +34,9 @@
     "test": "jest",
     "prebuild:storybook": "npm run test:generate-output",
     "build-storybook": "build-storybook -c .storybook -o build/",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "format": "prettier --check ./src",
+    "format:fix": "prettier --write ./src"
   },
   "dependencies": {},
   "devDependencies": {
@@ -52,12 +54,19 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
     "@vitejs/plugin-react": "^1.0.0",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.6.0",
+    "eslint-plugin-react": "^7.28.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.5",
+    "lint-staged": "^12.1.5",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.1",
+    "prettier": "^2.5.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "storybook-builder-vite": "^0.1.11",
@@ -71,5 +80,18 @@
   "peerDependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts ./src --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
   }
 }
