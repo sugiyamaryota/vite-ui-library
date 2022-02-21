@@ -41,7 +41,9 @@
     "lint:fix": "eslint --fix ./src",
     "prepare": "husky install"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@storybook/addon-actions": "^6.3.10",
